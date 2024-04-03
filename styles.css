@@ -1,0 +1,112 @@
+html,body {
+
+    scroll-behavior: smooth;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #f0f0f0;
+
+    margin: 0; /* Removes default margin provided by the browser */
+    padding: 0; /* Removes default padding provided by the browser */
+    height: 100%; /* Ensures that the body takes up the full height of the viewport */
+    min-height: 100%; /* Ensures that the body is never less than the viewport height */
+}
+
+h1 {
+    color: #333;
+}
+
+.banner {
+    
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+
+    background-color: #22549F; /* Adjust the color to match the banner background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Adjust the padding to match the desired spacing */
+
+    width: 100%; /* Makes the banner fill the full width of the screen */
+    position: fixed; /* This will position your banner relative to the viewport, which means it will always stay at the top */
+    top: 0;
+    left: 0;
+    /*z-index: 100; /* Ensures that your banner stays on top of other content */
+}
+
+.logo {
+    height: 40px; /* Adjust based on actual logo size */
+    margin-right: 20px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    margin-right: 20px; /* Adjust the margin to space out the links */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    font-size: small;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #dcdcdc; /* Color for hover state */
+}
+
+.report-button {
+    background-color: #e60000; /* Adjust to match button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px; /* Adjust for rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.report-button:hover {
+    background-color: #cc0000; /* Darker shade for hover state */
+}
+
+#introduction {
+    background-image: url('resources/images/PINS Introduction_Dark.jpg');
+}
+
+#spend {
+    background-color: #4C5960;
+}
+
+#sectormap {
+    background-image: url('resources/images/PINs Airspace.png');
+}
+
+#dashboard {
+    background-image: url('resources/images/ASA Site.png');
+}
+
+#sectormap {
+    background-image: url('resources/images/Sydney_Tower.png');
+}
+
+#sectorhealth {
+    background-image: url('resources/images/Sydney_Tower.png');
+}
+
+.content-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* or 'scroll' if you want the image to scroll with the page */
+    background-position: center;
+    min-height: 500px; /* Example fixed height or you can use height: 100vh for full screen */
+
+    margin: 20px; /* Removes default margin provided by the browser */
+    padding: 20px; /* Removes default padding provided by the browser */
+}
+
