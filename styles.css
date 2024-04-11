@@ -1,7 +1,6 @@
-html,body {
+html, body {
     scroll-behavior: smooth;
     font-family: "Roboto Condensed", sans-serif;
-    font-optical-sizing: auto;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -9,49 +8,60 @@ html,body {
     min-height: 100%;
 }
 
+h1, h2, h3 {
+    color: #22549F; 
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.05);
+}
+
 h1 {
     color: white;
-    font-size: 70px;
-    text-transform: uppercase;
+    font-size: 4.375rem; /* Adjusted from 70px to rem */
+    line-height: 1.0; /* Adjusted for better readability */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
-    width: 100%;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.05);
-    line-height: 0.4;
-    transform: scale(1) translateZ(0px);
 }
 
-h2 {
-    color: #22549F; 
-    font-size: 35px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-    margin: 0;
-    width: 100%;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.05);
-    line-height: 0.4; 
+h2, h3 {
+    font-size: 2.1875rem; /* Adjusted for h2, h3 */
+    line-height: 1.0;
 }
 
-h3 {
-    color: #22549F; 
-    font-size: 35px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-    width: 100%;
-    line-height: 1.5; 
+/* Responsive font sizes for different screen widths */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 3.75rem;
+    }
+    h2, h3 {
+        font-size: 2rem;
+    }
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        padding: 10px;
+    }
+    h2, h3 {
+        font-size: 1.75rem;
+    }
+    .map-container, .section, .sectiontwo {
+        padding: 20px; /* Adjusted padding for smaller screens */
+    }
+}
+
 
 .banner {
-    font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
     background-color: #163a5f;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 1.25rem 0;
     width: 100%; 
     position: fixed;
     top: 0;
@@ -85,6 +95,8 @@ h3 {
 
 .navigation a:hover {
     color: #dcdcdc;
+    text-decoration: underline;
+
 }
 
 #title {
@@ -123,31 +135,24 @@ h3 {
     background-image: url('resources/images/InteractiveDashboard.png');
 }
 
-.boldtext {
+.boldtext, .normaltext {
     color: #163a5f;
-    padding: 40px,5px;
-    max-width: 800px;
+    padding: 2.5rem 0.3125rem;
+    max-width: 50rem; /* Responsive width */
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.6;
-    font-family: "Roboto Condensed", sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
-.normaltext{
+.normaltext {
     color: white;
-    padding: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 20px;
-    line-height: 1.6;
-    font-family: "Roboto Condensed", sans-serif;
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.section {
+.section, .sectiontwo {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -164,14 +169,6 @@ h3 {
 
 .sectiontwo {
     background-image: url('resources/images/PINs Airspace_Dark.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    min-height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
     padding-top: 20px;
     padding-right: 160px;
     padding-bottom: 20px;
@@ -181,8 +178,7 @@ h3 {
 footer {
     background-color: #163a5f;
     color: white;
-    padding: 20px 0;
-    font-size: 14px;
+    padding: 1.25rem 0;
 }
 
 .footer-top {
@@ -194,8 +190,8 @@ footer {
 }
 
 .footer-logo img {
-    max-width: 200px; /* Adjust based on your logo's size */
-}
+    height: 60px;
+    margin-left: 20px;}
 
 .footer-nav a, .footer-social a {
     display: inline-block;
@@ -218,12 +214,18 @@ footer {
     opacity: 0;
     transform: scale(0);
     margin: 0 auto;
-    font-size: 100px;
-    font-family: "Roboto Condensed", sans-serif;
+    font-size: 6.25rem;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 4px rgba(34, 84, 159, 0.5);
 }
+
+@media (max-width: 1024px) {
+    .word {
+        font-size: 4.25rem; /* Adjust the font-size for smaller screens */
+    }
+}
+
 
 @keyframes flyInFromCenter {
     0% {
@@ -336,5 +338,4 @@ footer {
     margin-top:100px;
     margin-bottom: 40px;
     font-size: 18px;
-
   }
